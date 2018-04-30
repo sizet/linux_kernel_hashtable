@@ -1,0 +1,226 @@
+/* © */
+
+.css_body
+{
+    background-color: #bfdfff;
+}
+
+
+.css_div_form_title_small
+{
+    font-family: Courier New, Courier;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #5b2b1f;
+    padding: 2px 5px 0px 5px;
+}
+.css_div_form_body_small
+{
+    font-family: Courier New, Courier;
+    font-size: 12px;
+    color: #000000;
+    background-color: #fff4d5;
+    border: 1px solid #5b2b1f;
+    padding: 2px 5px 0px 5px;
+}
+.css_div_form_title_large
+{
+    font-family: Courier New, Courier;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #5b2b1f;
+    padding: 2px 5px 0px 5px;
+}
+.css_div_form_body_large
+{
+    font-family: Courier New, Courier;
+    font-size: 16px;
+    color: #000000;
+    background-color: #fff4d5;
+    border: 1px solid #5b2b1f;
+    padding: 2px 5px 0px 5px;
+}
+
+
+.css_div_hook
+{
+}
+
+
+.css_div_group
+{
+    border: 1px solid #000000;
+    padding: 5px 5px 5px 5px;
+    margin: 0px 0px 5px 0px;
+    display: inline-block;
+    overflow: auto;
+}
+
+
+.css_div_attent
+{
+    background-color: #ffffd9;
+    border: 1px dotted #7f7f00;
+    padding: 5px 5px 5px 5px;
+    display: inline-block;
+    overflow: auto;
+}
+
+
+.css_pre_code
+{
+    font-family: Courier New, Courier;
+    font-size: 12px;
+    background-color: #ffffd9;
+    border: 1px dotted #7f7f00;
+    padding: 5px 5px 5px 5px;
+    margin: 0px;
+    display: inline-block;
+    white-space:pre-wrap;
+}
+
+
+.css_table_figure
+{
+    border: 0px solid #000000;
+    margin-left: auto;
+    margin-right: auto;
+}
+.css_td_figure_image
+{
+    text-align: center;
+    border: 0px solid #000000;
+    padding: 0px;
+}
+.css_td_figure_text
+{
+    text-align: center;
+    border: 0px solid #000000;
+    padding: 0px;
+}
+
+
+.css_table_solid
+{
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    margin: 5px 0px 5px 0px;
+    padding: 0px;
+}
+.css_td_solid_center
+{
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 5px;
+}
+.css_td_solid_nowrap
+{
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: left;
+    border: 1px solid #000000;
+    padding: 5px;
+}
+.css_td_solid_normal
+{
+    vertical-align: middle;
+    text-align: left;
+    border: 1px solid #000000;
+    padding: 5px;
+}
+
+
+.css_table_none
+{
+    border: 0px solid #000000;
+}
+.css_td_none_nowrap
+{
+    white-space: nowrap;
+    vertical-align: top;
+    text-align: left;
+    border: 0px solid #000000;
+    padding: 0px;
+}
+.css_td_none_normal
+{
+    text-align: left;
+    border: 0px solid #000000;
+    padding: 0px;
+}
+
+
+.css_font_r1
+{
+    color: #ff0000;
+}
+.css_font_r2
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+.css_font_g1
+{
+    color: #007f00;
+}
+.css_font_g2
+{
+    font-weight: bold;
+    color: #007f00;
+}
+.css_font_c1
+{
+    color: #007faf;
+}
+.css_font_c2
+{
+    font-weight: bold;
+    color: #007faf;
+}
+.css_font_b1
+{
+    color: #0000ff;
+}
+.css_font_b2
+{
+    font-weight: bold;
+    color: #0000ff;
+}
+.css_font_p1
+{
+    color: #bf00bf;
+}
+.css_font_p2
+{
+    font-weight: bold;
+    color: #bf00bf;
+}
+
+
+a:link
+{
+    font-weight: bold;
+    color: #0000ff;
+    text-decoration: none;
+}
+a:active
+{
+    font-weight: bold;
+    color: #0000ff;
+    text-decoration: none;
+}
+a:visited
+{
+    font-weight: bold;
+    color: #0000ff;
+    text-decoration: none;
+}
+a:hover
+{
+    font-weight: bold;
+    color: #007f00;
+    text-decoration: none;
+}

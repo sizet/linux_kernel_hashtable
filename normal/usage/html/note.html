@@ -1,0 +1,1209 @@
+<!-- © -->
+
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="css_body">
+
+<div class="css_div_form_title_large">速查表</div>
+<div class="css_div_form_body_large">
+  <br>
+
+  <table class="css_table_solid">
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_INIT_HLIST_HEAD">INIT_HLIST_HEAD</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 初始化雜湊列.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_HLIST_HEAD">HLIST_HEAD</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 建立一個雜湊列並初始化.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_INIT_HLIST_NODE">INIT_HLIST_NODE</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 初始化雜湊節點.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_empty">hlist_empty</a></td>
+      <td class="css_td_solid_normal">
+        檢查雜湊列是否為空.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_unhashed">hlist_unhashed</a></td>
+      <td class="css_td_solid_normal">
+        檢查雜湊節點是否不在雜湊表上.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_add_head">hlist_add_head</a></td>
+      <td class="css_td_solid_normal">
+        插入雜湊節點到雜湊表開頭.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_add_before">hlist_add_before</a></td>
+      <td class="css_td_solid_normal">
+        插入雜湊節點到某個雜湊節點之前.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_add_after">hlist_add_after<br>hlist_add_behind</a></td>
+      <td class="css_td_solid_normal">
+        插入雜湊節點到某個雜湊節點之後.<br>
+        <font class="css_font_r1">從 kernel 3.17 開始之後更名為</font>
+        <font class="css_font_b2">hlist_add_behind</font>.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook___hlist_del">__hlist_del</a></td>
+      <td class="css_td_solid_normal">
+        從雜湊表上刪除雜湊節點.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_del">hlist_del</a></td>
+      <td class="css_td_solid_normal">
+        從雜湊表上刪除雜湊節點, 並設定雜湊節點的 next 和 prev 為 LIST_POISON1 和 LIST_POISON2.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_del_init">hlist_del_init</a></td>
+      <td class="css_td_solid_normal">
+        從雜湊表上刪除雜湊節點, 並初始化雜湊節點.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_for_each_entry">hlist_for_each_entry</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 走訪某個雜湊列上的所有節點 (不可在走訪期間刪除節點).<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_for_each_entry_safe">hlist_for_each_entry_safe</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 走訪某個雜湊列上的所有節點 (可以在走訪期間刪除節點).<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_for_each_entry_from">hlist_for_each_entry_from</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 從某個節點開始走訪雜湊列上的所有節點 (不可在走訪期間刪除節點).<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_for_each_entry_continue">hlist_for_each_entry_continue</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 從某個節點的後一個節點開始走訪雜湊列上的所有節點 (不可在走訪期間刪除節點).<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_entry">hlist_entry</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 透過結構成員的位址獲得結構主體的位址.<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_for_each">hlist_for_each</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 走訪某個雜湊列上的所有雜湊節點 (不可在走訪期間刪除節點).<br>
+      </td>
+    </tr>
+    <tr>
+      <td class="css_td_solid_nowrap"><a href="#hook_hlist_for_each_safe">hlist_for_each_safe</a></td>
+      <td class="css_td_solid_normal">
+        巨集, 走訪某個雜湊列上的所有雜湊節點 (可以在走訪期間刪除節點).<br>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+</div>
+<br>
+
+<div class="css_div_form_title_large">說明</div>
+<div class="css_div_form_body_large">
+  <br>
+
+  這邊是一般的 hash table (從 kernel 3.7 開始之後有多新版的 generic hash table).<br>
+  <br>
+
+  需要的標頭檔 :<br>
+  <div class="css_div_attent">
+    <font class="css_font_b1">#include &lt;linux/list.h&gt;</font><br>
+  </div>
+  <br><br>
+
+  紀錄雜湊表的結構 :<br>
+  <div class="css_div_attent">
+    <font class="css_font_g1">struct hlist_head</font><br>
+  </div>
+  <br>
+  紀錄雜湊表節點的結構, 須要在自定的資料結構中宣告一個 :<br>
+  <div class="css_div_attent">
+    <font class="css_font_g1">struct hlist_node</font><br>
+  </div>
+  <br><br>
+
+  在自定的資料結構中宣告一個雜湊節點 :<br>
+<pre class="css_pre_code">
+// 範例, 定義一個記錄每個產品的名稱和價格的結構.
+struct product_t
+{
+    // 雜湊節點.
+    struct hlist_node hnode;
+    // 產品名稱.
+    char name[16];
+    // 產品價格.
+    unsigned int price;
+};
+</pre>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_INIT_HLIST_HEAD"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">INIT_HLIST_HEAD</font><br>
+    巨集, 初始化雜湊列.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_head *</font><br>
+          <font class="css_font_g1">ptr</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要初始化的雜湊列.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+// 範例, 宣告一個紀錄產品資料的雜湊表.
+
+// 雜湊表的大小.
+#define MAX_HASH_TABLE_SIZE 5
+
+// 雜湊表變數.
+struct hlist_head product_hash_table[MAX_HASH_TABLE_SIZE];
+
+// 在函式中初始化雜湊表, 例如在核心模組的 init() 函式.
+static int __init main_init(
+    void)
+{
+    size_t tidx;
+
+    // 初始化雜湊表.
+    for(tidx = 0; tidx < MAX_HASH_TABLE_SIZE; tidx++)
+    {
+        INIT_HLIST_HEAD(product_hash_table + tidx);
+    }
+
+    return 0;
+}
+</pre>
+  </div>
+  <br><br>
+
+  需要自行撰寫雜湊函式 :<br>
+<pre class="css_pre_code">
+// 範例, 使用 name 處理.
+void hash_algo(
+    char *product_name,
+    size_t *hash_table_index_buf)
+{
+    size_t tidx;
+
+    tidx = (strlen(product_name) + product_name[0]) % MAX_HASH_TABLE_SIZE;
+
+    *hash_table_index_buf = tidx;
+}
+</pre>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_HLIST_HEAD"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">HLIST_HEAD</font><br>
+    巨集, 建立一個雜湊列並初始化.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_g1">name</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要建立的雜湊列名稱.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+// 建立一個雜湊列並初始化.
+HLIST_HEAD(product_hash);
+
+// 相當於 :
+// struct hlist_head product_hash;
+// INIT_HLIST_HEAD(&product_hash);
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_INIT_HLIST_NODE"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">INIT_HLIST_NODE</font><br>
+    巨集, 初始化雜湊節點.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">h</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要初始化的雜湊節點.<br>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_empty"></div>
+  <div class="css_div_group">
+    <font class="css_font_r2">int</font><br>
+    <font class="css_font_b2">hlist_empty</font><br>
+    檢查雜湊列是否為空.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">const struct hlist_head *</font><br>
+          <font class="css_font_g1">h</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要檢查的雜湊列.<br>
+        </td>
+      </tr>
+    </table>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">回傳</font></td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap"><font class="css_font_g1">0</font></td>
+        <td class="css_td_solid_normal">是空的.</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap"><font class="css_font_g1">1</font></td>
+        <td class="css_td_solid_normal">不是空的.</td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    size_t tidx;
+    int ret;
+
+    // 01. 要檢查的雜湊列.
+    tidx = ...
+
+    // 檢查.
+    ret = hlist_empty(product_hash_table + tidx);
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_unhashed"></div>
+  <div class="css_div_group">
+    <font class="css_font_r2">int</font><br>
+    <font class="css_font_b2">hlist_unhashed</font><br>
+    檢查雜湊節點是否不在雜湊表上.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">const struct hlist_node *</font><br>
+          <font class="css_font_g1">h</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要檢查的雜湊節點.<br>
+        </td>
+      </tr>
+    </table>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">回傳</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap"><font class="css_font_g1">0</font></td>
+        <td class="css_td_solid_normal">在雜湊表上.</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap"><font class="css_font_g1">1</font></td>
+        <td class="css_td_solid_normal">不在雜湊表上.</td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    struct product_t *target_product;
+    int ret;
+
+    // 01. 要檢查的節點.
+    target_product = ...
+
+    // 檢查.
+    ret = hlist_unhashed(&(target_product->hnode));
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_add_head"></div>
+  <div class="css_div_group">
+    <font class="css_font_r2">void</font><br>
+    <font class="css_font_b2">hlist_add_head</font><br>
+    插入雜湊節點到雜湊表開頭.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">n</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+              要插入的雜湊節點.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_head *</font><br>
+          <font class="css_font_g1">h</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+              要插入到哪個雜湊列.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    sizet tidx;
+    struct product_t *new_product;
+
+    // 01. 要把資料放在哪個雜湊列.
+    tidx = ...    
+    // 01. 使用 kmalloc() 取得空間.
+    // 02. 填入產品資料.
+    // 03. 確認雜湊表上沒有相同產品名稱的資料存在.
+    new_product = ...
+
+    // 初始化湊表節點.
+    INIT_HLIST_NODE(&(new_product->hnode));
+
+    // 插入.
+    hlist_add_head(&(new_product->hnode), product_hash_table + tidx);
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_add_before"></div>
+  <div class="css_div_group">
+    <font class="css_font_r2">void</font><br>
+    <font class="css_font_b2">hlist_add_before</font><br>
+    插入雜湊節點到某個雜湊節點之前.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">n</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要插入到哪個雜湊節點之前.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">next</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要插入的雜湊節點.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    struct product_t *target_product, *new_product;
+
+    // 01. 要插入到哪個節點之前.
+    target_product = ...    
+    // 01. 使用 kmalloc() 取得空間.
+    // 02. 填入產品資料.
+    // 03. 確認雜湊表上沒有相同產品名稱的資料存在.
+    new_product = ...
+
+    // 初始化雜湊節點.
+    INIT_HLIST_NODE(&(new_product->hnode));
+
+    // 插入.
+    hlist_add_before(&(target_product->hnode), &(new_product->hlist));
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_add_after"></div>
+  <div class="css_div_group">
+    <font class="css_font_r2">void</font><br>
+    <font class="css_font_b2">hlist_add_after</font>
+    (<font class="css_font_r1">從 kernel 3.17 開始之後更名為</font>
+    <font class="css_font_b2">hlist_add_behind</font>)<br>
+    插入雜湊節點到某個雜湊節點之後.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">n</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要插入到哪個雜湊節點之後.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">next</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要插入的雜湊節點.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    struct product_t *target_product, *new_product;
+
+    // 01. 要插入到哪個節點之後.
+    target_product = ...    
+    // 01. 使用 kmalloc() 取得空間.
+    // 02. 填入產品資料.
+    // 03. 確認雜湊表上沒有相同產品名稱的資料存在.
+    new_product = ...
+
+    // 初始化雜湊節點.
+    INIT_HLIST_NODE(&(new_product->hnode));
+
+    // 插入.
+    hlist_add_after(&(target_product->hnode), &(new_product->hlist));
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook___hlist_del"></div>
+  <div class="css_div_group">
+    <font class="css_font_r2">void</font><br>
+    <font class="css_font_b2">__hlist_del</font><br>
+    從雜湊表上刪除雜湊節點.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">n</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要刪除的雜湊節點.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    struct product_t *target_product;
+
+    // 01. 找到要刪除的節點.
+    target_product = ...
+
+    // 刪除.
+    __hlist_del(&(target_product->hnode));
+    kfree(target_product);
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_del"></div>
+  <div class="css_div_group">
+    <font class="css_font_r2">void</font><br>
+    <font class="css_font_b2">hlist_del</font><br>
+    從雜湊表上刪除雜湊節點, 並設定雜湊節點的 next 和 prev 為 LIST_POISON1 和 LIST_POISON2.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">n</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要刪除的雜湊節點.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    struct product_t *target_product;
+
+    // 01. 找到要刪除的節點.
+    target_product = ...
+
+    // 刪除.
+    hlist_del(&(target_product->hnode));
+    kfree(target_product);
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_del_init"></div>
+  <div class="css_div_group">
+    <font class="css_font_r2">void</font><br>
+    <font class="css_font_b2">hlist_del_init</font><br>
+    從雜湊表上刪除雜湊節點, 並初始化雜湊節點.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">n</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要刪除的雜湊節點.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    struct product_t *target_product;
+
+    // 01. 找到要刪除的節點.
+    target_product = ...
+
+    // 刪除.
+    hlist_del_init(&(target_product->hnode));
+    kfree(target_product);
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_for_each_entry"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">hlist_for_each_entry</font><br>
+    巨集, 走訪某個雜湊列上的所有節點 (不可在走訪期間刪除節點).<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct ??? *</font><br>
+          <font class="css_font_g1">tpos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          紀錄指向目前節點的變數.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">pos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          紀錄指向目前雜湊節點的變數.<br>
+          <font class="css_font_r1">從 kernel 3.9 開始之後此參數被移除.</font><br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_head *</font><br>
+          <font class="css_font_g1">head</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要走訪的雜湊列.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_g1">member</font>
+        </td>
+        <td class="css_td_solid_normal">
+          節點的結構內紀錄雜湊節點資料的變數名稱.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    size_t tidx;
+    struct product_t *each_product;
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    struct hlist_node *each_hnode;
+#endif
+
+    // 01. 要走訪哪個雜湊列.
+    tidx = ...
+
+    // 走訪.
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    hlist_for_each_entry(each_product, each_hnode, product_hash_table + tidx, hnode)
+    {
+        // each_product 會指向目前的節點.
+        // each_hnode 會指向目前的雜湊節點.
+        ...
+    }
+#else
+    hlist_for_each_entry(each_product, product_hash_table + tidx, hnode)
+    {
+        // each_product 會指向目前的節點.
+        ...
+    }
+#endif
+
+    // 注意 :
+    // kernel 版本小於 3.9 :
+    //   如果在 product_hash_table 無節點存在,
+    //     走訪完畢後 each_product 的值不會改變, each_hnode 會指向 NULL.
+    //   如果在 product_hash_table 有節點存在,
+    //     走訪完畢後 each_product 會指向雜湊列上最後一個節點, each_hnode 會指向 NULL.
+    // kernel 版本大於等於 3.9 :
+    //   走訪完畢後 each_product 會指向 NULL.
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_for_each_entry_safe"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">hlist_for_each_entry_safe</font><br>
+    巨集, 走訪某個雜湊列上的所有節點 (可以在走訪期間刪除節點).<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct ??? *</font><br>
+          <font class="css_font_g1">tpos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          紀錄指向目前節點的變數.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">pos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          紀錄指向目前雜湊節點的變數.<br>
+          <font class="css_font_r1">從 kernel 3.9 開始之後此參數被移除.</font><br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">n</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          暫存用的雜湊節點變數.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_head *</font><br>
+          <font class="css_font_g1">head</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要走訪的雜湊列.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_g1">member</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          節點的結構內紀錄雜湊節點資料的變數名稱.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    size_t tidx;
+    struct product_t *each_product;
+    struct hlist_node *tmp_hnod;
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    struct hlist_node *each_hnode;
+#endif
+
+    // 01. 要走訪哪個雜湊列.
+    tidx = ...
+
+    // 走訪.
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    hlist_for_each_entry_safe(each_product, each_hnode, tmp_hnod, product_hash_table + tidx, hnode)
+    {
+        // each_product 會指向目前的節點.
+        // each_hnode 會指向目前的雜湊節點.
+        // 可以在訪期間刪除節點.
+        hlist_del(&(each_product->hnode));
+        kfree(each_product);
+    }
+#else
+    hlist_for_each_entry_safe(each_product, tmp_hnod, product_hash_table + tidx, hnode)
+    {
+        // each_product 會指向目前的節點.
+        // 可以在訪期間刪除節點.
+        hlist_del(&(each_product->hnode));
+        kfree(each_product);
+    }
+#endif
+
+    // 注意 :
+    // kernel 版本小於 3.9 :
+    //   如果在 product_hash_table 無節點存在,
+    //     走訪完畢後 each_product 的值不會改變, each_hnode 會指向 NULL.
+    //   如果在 product_hash_table 有節點存在,
+    //     走訪完畢後 each_product 會指向雜湊列上最後一個節點, each_hnode 會指向 NULL.
+    // kernel 版本大於等於 3.9 :
+    //   走訪完畢後 each_product 會指向 NULL.
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_for_each_entry_from"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">hlist_for_each_entry_from</font><br>
+    巨集, 從某個節點開始走訪雜湊列上的所有節點 (不可在走訪期間刪除節點).<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct ??? *</font><br>
+          <font class="css_font_g1">tpos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          從此節點開始走訪, 紀錄指向目前節點的變數.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">pos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          從此雜湊節點開始走訪, 紀錄指向目前雜湊節點的變數.<br>
+          <font class="css_font_r1">從 kernel 3.9 開始之後此參數被移除.</font><br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_g1">member</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          節點的結構內紀錄雜湊節點資料的變數名稱.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    struct product_t *each_product;
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    struct hlist_node *each_hnode;
+#endif
+
+    // 01. 從哪個節點開始走訪.
+    each_product = ...
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    each_hnode = &(each_product->hnode);
+#endif
+
+    // 走訪.
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    hlist_for_each_entry_from(each_product, each_hnode, hnode)
+    {
+        // each_product 會指向目前的節點.
+        // each_hnode 會指向目前的雜湊節點.
+        ...
+    }
+#else
+    hlist_for_each_entry_from(each_product, hnode)
+    {
+        // each_product 會指向目前的節點.
+        ...
+    }
+#endif
+
+    // 注意 :
+    // kernel 版本小於 3.9 :
+    //   走訪完畢後 each_product 會指向雜湊列上最後一個節點, each_hnode 會指向 NULL.
+    // kernel 版本大於等於 3.9 :
+    //   走訪完畢後 each_product 會指向 NULL.
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_for_each_entry_continue"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">hlist_for_each_entry_continue</font><br>
+    巨集, 從某個節點的後一個節點開始走訪雜湊列上的所有節點 (不可在走訪期間刪除節點).<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct ??? *</font><br>
+          <font class="css_font_g1">tpos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          從此節點的後一個節點開始走訪, 紀錄指向目前節點的變數.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">pos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          從此雜湊節點的後一個雜湊節點開始走訪, 紀錄指向目前雜湊節點的變數.<br>
+          <font class="css_font_r1">從 kernel 3.9 開始之後此參數被移除.</font><br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_g1">member</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          節點的結構內紀錄雜湊節點資料的變數名稱.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    struct product_t *each_product;
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    struct hlist_node *each_hnode;
+#endif
+
+    // 01. 從此節點的後一個節點開始走訪.
+    each_product = ...
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    each_hnode = &(each_product->hnode);
+#endif
+
+    // 走訪.
+#if LINUX_VERSION_CODE < KERNEL_VERSION(3, 9, 0)
+    hlist_for_each_entry_continue(each_product, each_hnode, hnode)
+    {
+        // each_product 會指向目前的節點.
+        // each_hnode 會指向目前的雜湊節點.
+        ...
+    }
+#else
+    hlist_for_each_entry_continue(each_product, hnode)
+    {
+        // each_product 會指向目前的節點.
+        ...
+    }
+#endif
+
+    // 注意 :
+    // kernel 版本小於 3.9 :
+    //   走訪完畢後 each_product 會指向雜湊列上最後一個節點, each_hnode 會指向 NULL.
+    // kernel 版本大於等於 3.9 :
+    //   走訪完畢後 each_product 會指向 NULL.
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_entry"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">hlist_entry</font><br>
+    巨集, 透過結構成員的位址獲得結構主體的位址.<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">ptr</font>
+        </td>
+        <td class="css_td_solid_normal">
+          結構成員的位址.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_g1">type</font>
+        </td>
+        <td class="css_td_solid_normal">
+          結構的類型.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_g1">member</font>
+        </td>
+        <td class="css_td_solid_normal">
+          結構成員的名稱.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    struct hlist_node *target_hnode;
+    struct product_t *target_product;
+
+    // 01. 指向某個雜湊節點.
+    target_hnode = ...
+
+    // 取得結構主體位址.
+    target_product = hlist_entry(target_hnode, struct product_t, hnode);
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_for_each"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">hlist_for_each</font><br>
+    巨集, 走訪某個雜湊列上的所有雜湊節點 (不可在走訪期間刪除節點).<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">pos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          紀錄指向目前雜湊節點的變數.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_head *</font><br>
+          <font class="css_font_g1">head</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要走訪的雜湊列.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    size_t tidx;
+    struct hlist_node *each_hnode;
+    struct product_t *each_product;
+
+    // 01. 要走訪哪個雜湊列.
+    tidx = ...
+
+    // 走訪.
+    hlist_for_each(each_hnode, product_hash_table + tidx)
+    {
+        // each_hnode 會指向目前的雜湊節點.
+        each_product = hlist_entry(each_hnode, struct product_t, hnode);
+        ...
+    }
+
+    // 注意, 走訪完畢後 each_hnode 會指向 NULL.
+}
+</pre>
+  </div>
+  <br><br>
+
+  <div class="css_div_hook" id="hook_hlist_for_each_safe"></div>
+  <div class="css_div_group">
+    <font class="css_font_b2">hlist_for_each_safe</font><br>
+    巨集, 走訪某個雜湊列上的所有雜湊節點 (可以在走訪期間刪除節點).<br>
+    <br>
+    <table class="css_table_solid">
+      <tr>
+        <td class="css_td_solid_center" colspan="2">參數</td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">pos</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          紀錄指向目前雜湊節點的變數.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_node *</font><br>
+          <font class="css_font_g1">n</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          暫存用的雜湊節點變數.<br>
+        </td>
+      </tr>
+      <tr>
+        <td class="css_td_solid_nowrap">
+          <font class="css_font_r1">struct hlist_head *</font><br>
+          <font class="css_font_g1">head</font><br>
+        </td>
+        <td class="css_td_solid_normal">
+          要走訪的雜湊列.<br>
+        </td>
+      </tr>
+    </table>
+    <br>
+    範例 :<br>
+<pre class="css_pre_code">
+void ...(
+    void)
+{
+    size_t tidx;
+    struct hlist_node *each_hnode, *tmp_hnode;
+    struct product_t *each_product;
+
+    // 01. 要走訪哪個雜湊列.
+    tidx = ...
+
+    // 走訪.
+    hlist_for_each_safe(each_hnode, tmp_hnode, product_hash_table + tidx)
+    {
+        // each_hnode 會指向目前的雜湊節點.
+        each_product = hlist_entry(each_hnode, struct product_t, hnode);
+        ...
+        // 可以在走訪期間刪除節點.
+        __hlist_del(each_hnode);
+        kfree(each_product);
+    }
+
+    // 注意, 走訪完畢後 each_hnode 會指向 NULL.
+}
+</pre>
+  </div>
+  <br><br>
+
+</div>
+
+</body>
+
+</html>

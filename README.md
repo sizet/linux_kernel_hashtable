@@ -1,1 +1,0 @@
-# linux_kernel_hashtable
